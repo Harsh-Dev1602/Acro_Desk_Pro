@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+.Box_Shedow{
+    box-shadow: 2px 2px 1px -0.5px #cccc;
+}
+.Bg_Img{
+    background-size: cover;
+    background-image: url("../public/Img/bgImg.jpeg");
+    background-position: center;
+    object-fit: cover;
+}
