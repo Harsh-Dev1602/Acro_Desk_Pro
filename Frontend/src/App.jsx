@@ -10,6 +10,7 @@ import About from './Com/About'
 function App() {
   return (
     <>
+    <div className="w-[94%] h-auto mx-auto  min-[1700px]:w-[70%] min-[3500px]:w-[20%] bg-white text-black">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -17,9 +18,9 @@ function App() {
         <Route path="/login" element={<LogIn />} />
         <Route path="/about" element={<About/>} />
         <Route path="/contect" element={<Contect/>} />
-
       </Routes>
       <Footer />
+    </div>
     </>
   )
 }
