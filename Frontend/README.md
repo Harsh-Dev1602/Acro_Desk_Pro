@@ -1,12 +1,7 @@
-# React + Vite
+# Acro_Desk_Pro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+#AcroDesk Pro is an innovative digital platform designed to assist college professors in solving student doubts efficiently and in real time. It streamlines communication between students and faculty through structured doubt submission, automated routing, and integrated chat or video support.
 
-Currently, two official plugins are available:
+#Professors can track queries, view past discussions, and manage subject-specific concerns with ease. With its intuitive dashboard and analytics, AcroDesk Pro empowers educators to provide timely academic support while improving the overall learning experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+#Designed with ease of use in mind, AcroDesk Pro is mobile and desktop friendly, secure, and scalable for any college or university setup. It not only enhances learning outcomes for students but also reduces communication overload for professors.
