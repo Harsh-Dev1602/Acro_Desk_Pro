@@ -6,6 +6,7 @@ import LogIn from './Com/LogIn'
 import { Route, Routes } from 'react-router-dom'
 import Contect from './Com/Contect'
 import About from './Com/About'
+import { Toaster } from 'react-hot-toast';
 
 function App() {
   return (
@@ -23,6 +24,20 @@ function App() {
           <Footer />
         </div>
       </div>
+
+      <Toaster
+        position="bottom-center"
+        reverseOrder={false}
+        toastOptions={{
+          style: {
+            background: 'linear-gradient(to right, #6366f1, #8b5cf6, #ec4899)',
+            color: 'white',
+            border: 'none',
+            fontSize: '20px'
+          },
+        }}
+      />
+
     </>
   )
 }
