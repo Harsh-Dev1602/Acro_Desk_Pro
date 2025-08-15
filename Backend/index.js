@@ -1,19 +1,27 @@
 import express from "express";
 import dotenv from 'dotenv';
 import mongoose from "mongoose";
+import userRouter from "./routes/user.route.js";
+import cors from "cors";
 
 dotenv.config();
-const app = express()
+
 
 const PORT = process.env.PORT || 3001;
 const URI = process.env.MONGODB_URI;
 
+const app = express();
+app.use(express.json());
+app.use(cors());
+
 try {
-    mongoose.connect(URI);
-    console.log("AcroDesk Pro Connected to Mongoose db..");
+  mongoose.connect(URI);
+  console.log("AcroDesk Pro Connected to Mongoose db..");
 } catch (error) {
-    console.log(error);
+  console.log(error);
 }
+
+app.use("/api/user",userRouter);
 
 app.listen(PORT, () => {
   console.log(`AcroDesk Pro Running this  http://localhost:${PORT}`)
