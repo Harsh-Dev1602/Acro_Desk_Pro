@@ -5,8 +5,8 @@ import stu from "../../public/Img/stu.webp"
 function About() {
     return (
         <>
-            <div className="w-[90%] mx-auto p-2">
-                <h1 className="bg-gradient-to-r flex justify-center items-center gap-2 from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent p-2 font-bold text-2xl md:text-4xl">About AcroDesk <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md text-sm p-1 text-white font-bold'>Pro</span></h1>
+            <div className="w-[90%] mx-auto py-4">
+                <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-2xl md:text-4xl font-bold">About Us</span>
 
                 <div className="flex flex-col lg:flex-row justify-center items-center gap-5">
                     <img src={stu} className=" w-[300px] rounded-xl Box_Shedow" />

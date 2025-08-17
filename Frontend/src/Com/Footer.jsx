@@ -27,12 +27,12 @@ function Footer() {
 
   return (
     <>
-      <div className="w-[90%] rounded-t-xl mx-auto p-5 py-10 bg-black">
+      <div className="w-[90%] rounded-t-xl mx-auto py-15 bg-black">
         <div className=" flex flex-col p-5 gap-10 lg:flex-row justify-between items-center ">
           <img src={Logo1} className=' p-5 rounded-xl bg-white Box_Shedow' />
           
-          <div className="Box_Shedow p-2 rounded-xl flex justify-center items-center flex-col gap-2">
-            <h1 className=" text-xl  text-white">FOLLOW US</h1>
+          <div className="Box_Shedow p-4 rounded-xl flex justify-center items-center flex-col gap-2">
+            <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl">FOLLOW US</h1>
             <ul className=" flex  justify-center items-center gap-5">
               {
                 Icon.map(({ id, icon }) => (

@@ -2,9 +2,11 @@ import React from 'react';
 import { useForm } from "react-hook-form";
 import axios from 'axios';
 import toast from 'react-hot-toast';
+import { useAuth } from "../Context/AuthProvider.jsx";
 
 function LogIn() {
-
+  
+  const [authUser, setAuthUser] = useAuth();
      const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful }, } = useForm()
   React.useEffect(() => {
     if (isSubmitSuccessful) {
@@ -23,7 +25,8 @@ function LogIn() {
         if (response.data) {
           toast.success("Login successfully");
         }
-        localStorage.setItem("AcroDesk Pro", JSON.stringify(response.data));
+        sessionStorage.setItem("AcroDesk Pro", JSON.stringify(response.data));
+        setAuthUser(response.data);
       })
       .catch((error) => {
         if (error.response) {

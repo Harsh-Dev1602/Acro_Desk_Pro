@@ -26,6 +26,7 @@ export const register = async (req, res) => {
           id: newUser.id,
           fullname: newUser.fullname,
           email: newUser.email,
+          role:newUser.role,
         },
       });
     }
@@ -55,6 +56,7 @@ export const login = async (req, res) => {
         id: user.id,
         fullname: user.fullname,
         email: user.email,
+        role: user.role,
       },
 
     });
@@ -67,7 +69,6 @@ export const login = async (req, res) => {
 // Logout API
 export const logout = async (req, res) => {
   try {
-    // res.clearCookie("jwt");
     res.status(201).json({ message: "User log out successfully.." });
   } catch (error) {
     console.log(error);

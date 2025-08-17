@@ -2,11 +2,61 @@ import React from 'react'
 import axios from "axios";
 import toast from 'react-hot-toast';
 import { useForm } from "react-hook-form"
+import { useAuth } from "../Context/AuthProvider";
 
 function Register() {
+    const [authUser, setAuthUser] = useAuth();
 
-    const AllRole = ["Select Role", "Student", "Faculty", "H.O.D."];
-    const AllDep = ["Select Department", "CSE", "IT", "ME", "CE"]
+    const AllRole = [
+        {
+            id: 0,
+            text: "Select Role",
+            value: "",
+        },
+        {
+            id: 1,
+            text: "Student",
+            value: "Student",
+        },
+        {
+            id: 2,
+            text: "Faculty",
+            value: "Faculty",
+        },
+        {
+            id: 3,
+            text: "H.O.D.",
+            value: "HOD",
+        },
+    ];
+
+    const AllDep = [
+        {
+            id: 0,
+            text: "Select Department",
+            value: "",
+        },
+        {
+            id: 1,
+            text: "CSE",
+            value: "CSE",
+        },
+        {
+            id: 2,
+            text: "IT",
+            value: "IT",
+        },
+        {
+            id: 3,
+            text: "ME",
+            value: "ME",
+        },
+        {
+            id: 4,
+            text: "CE",
+            value: "CE",
+        },
+    ];
 
     const { register, handleSubmit, reset, formState: { errors, isSubmitSuccessful } } = useForm();
 
@@ -29,11 +79,10 @@ function Register() {
         await axios.post("/api/user/register", userInfo)
             .then((response) => {
                 if (response.data) {
-                    toast.success("Register successfully.."); 
-
+                    toast.success("Register successfully..");
                 }
-                localStorage.setItem("AcroDesk Pro", JSON.stringify(response.data));
-
+                sessionStorage.setItem("AcroDesk Pro", JSON.stringify(response.data));
+                setAuthUser(response.data);
             })
             .catch((error) => {
                 if (error.response) {
@@ -63,7 +112,7 @@ function Register() {
                     <div className="w-full h-auto">
                         <select {...register("role", { required: true })} className='w-full p-2 outline-none text-xl cursor-pointer text-center rounded-xl shadow-sm shadow-[#cccc]'>
                             {
-                                AllRole.map((text) => (<option key={text} className=" outline-none cursor-pointer " >{text}</option>))
+                                AllRole.map(({ id, value, text }) => (<option key={id} value={value} className=" outline-none cursor-pointer " >{text}</option>))
                             }
                         </select>
                         {errors.role && <span className=" text-red-600 font-semibold text-md">This field is required</span>}
@@ -72,7 +121,7 @@ function Register() {
                     <div className="w-full h-auto">
                         <select {...register("department", { required: true })} className='w-full p-2 outline-none  text-xl cursor-pointer text-center rounded-xl shadow-sm shadow-[#cccc]'>
                             {
-                                AllDep.map((text) => (<option key={text} className=" outline-none cursor-pointer ">{text}</option>))
+                                AllDep.map(({ id, text, value }) => (<option key={id} value={value} className=" outline-none cursor-pointer ">{text}</option>))
                             }
                         </select>
                         {errors.department && <span className=" text-red-600 font-semibold text-md">This field is required</span>}
