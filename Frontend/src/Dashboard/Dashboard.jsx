@@ -22,7 +22,7 @@ function Dashboard() {
                     <h1 className=" text-2xl">Welcome, {authUser.user.role}</h1>
                     <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent  text-xl ">Hello {authUser.user.fullname}</span>
                 </div>
-                 {dashboardRole(authUser.user.role)}
+                {dashboardRole(authUser.user.role)}
 
             </div>
         </>

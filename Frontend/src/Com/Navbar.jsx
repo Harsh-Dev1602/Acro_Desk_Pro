@@ -24,21 +24,21 @@ function Navbar() {
     const roleNavMap = {
         Student: [
             { id: 1, text: "Home", link: "/dashboard" },
-            { id: 2, text: "Queries", link: "/queries" },
-            { id: 3, text: "Documents", link: "/documents" },
-            { id: 4, text: "Message Board", link: "/messageboard" },
+            { id: 2, text: "Queries", link: "/dashboard/student/queries" },
+            { id: 3, text: "Documents", link: "/dashboard/student/documents" },
+            { id: 4, text: "Message Board", link: "/dashboard/student/messageboard" },
         ],
         Faculty: [
             { id: 1, text: "Home", link: "/dashboard" },
-            { id: 2, text: "View Queries", link: "/viewqueries" },
-            { id: 3, text: "Upload", link: "/upload" },
-            { id: 4, text: "Message Board", link: "/messageboard" },
+            { id: 2, text: "View Queries", link: "/dashboard/faculty/viewqueries" },
+            { id: 3, text: "Upload", link: "/dashboard/faculty/upload" },
+            { id: 4, text: "Message Board", link: "/dashboard/faculty/messageboard" },
         ],
         HOD: [
             { id: 1, text: "Home", link: "/dashboard" },
-            { id: 2, text: "View Queries", link: "/viewqueries" },
-            { id: 3, text: "View Documents", link: "/viewdocuments" },
-            { id: 4, text: "Message Board", link: "/messageboard" },
+            { id: 2, text: "View Queries", link: "/dashboard/hod/viewqueries" },
+            { id: 3, text: "View Documents", link: "/dashboard/hod/viewdocuments" },
+            { id: 4, text: "Message Board", link: "/dashboard/hod/messageboard" },
         ],
     };
 
