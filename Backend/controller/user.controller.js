@@ -1,4 +1,5 @@
 import User from "../models/user.model.js";
+import Admin from "../models/admin.model.js";
 import bcrypt from "bcrypt";
 //  Register API
 export const register = async (req, res) => {
@@ -41,7 +42,8 @@ export const register = async (req, res) => {
 export const login = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const user = await User.findOne({ email });
+    const user = await User.findOne({ email }) || await Admin.findOne({ email });
+
     const isMatch = await bcrypt.compare(password, user.password);
     if (!user) {
       return res.status(400).json({ error: "Invalid user email id" });

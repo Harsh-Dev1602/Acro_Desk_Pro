@@ -1,0 +1,31 @@
+import Admin from '../models/admin.model.js';
+import bcrypt from 'bcrypt';
+
+ const seedAdmin = async () => {
+   const adminEmail = process.env.ADMIN_EMAIL;
+   
+   try {
+     const existingAdmin = await Admin.findOne({ email: adminEmail });
+     
+     if (existingAdmin) {
+       console.log('✅ @dmin already exists..');
+       return;
+      }
+    const hashPassword = await bcrypt.hash(process.env.ADMIN_PASS, 10);
+
+    const newAdmin = new Admin({
+      fullname: 'HARSH DEV',
+      email: adminEmail,
+      password: hashPassword,
+      role: '@dmin',
+      verified: true
+    });
+
+    await newAdmin.save();
+    console.log('🧑‍💼 Default @dmin created');
+  } catch (error) {
+    console.error('❌ Error:  default @dmin not created:', error.message);
+  }
+};
+
+export default seedAdmin

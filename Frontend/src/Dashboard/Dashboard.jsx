@@ -1,6 +1,7 @@
 import StudentDashboard from "../Dashboard/StudentDashboard/StudentDashboard.jsx"
 import FacultyDashboard from "../Dashboard/FacultyDashboard/FacultyDashboard.jsx"
 import HODDashboard from "../Dashboard/HODDashboard/HODDashboard.jsx"
+import AdminDashboard from "./AdminDashboard/AdminDashboard.jsx"
 import { useAuth } from "../Context/AuthProvider.jsx";
 
 function Dashboard() {
@@ -10,6 +11,7 @@ function Dashboard() {
             Student: <StudentDashboard />,
             Faculty: <FacultyDashboard />,
             HOD: <HODDashboard />,
+            "@dmin": <AdminDashboard/>
         };
         return roleMap[role];
     };
@@ -20,7 +22,7 @@ function Dashboard() {
             <div className="w-[90%] mx-auto ">
                 <div className=" p-1 font-bold text-center">
                     <h1 className=" text-2xl">Welcome, {authUser.user.role}</h1>
-                    <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent  text-xl ">Hello {authUser.user.fullname}</span>
+                    <span className="Text_Color  text-xl ">Hello {authUser.user.fullname}</span>
                 </div>
                 {dashboardRole(authUser.user.role)}
 

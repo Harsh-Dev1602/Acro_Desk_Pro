@@ -67,14 +67,16 @@ function Services() {
     return (
         <>
             <div className="w-[90%] h-auto  mx-auto py-10">
-                <h1 className=" bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500  bg-clip-text text-transparent  font-bold text-center text-2xl md:text-4xl  my-2">Services </h1>
+                <h1 className="Text_Color  font-bold text-center text-2xl md:text-4xl  my-2">Services </h1>
                 <div className="slider-container ">
                     <Slider {...settings}>
                         {
                             Services.map(({ id, text, p }) => (
-                                <div key={id} className="h-[150px] p-2 my-5 rounded-xl Box_Shedow ">
-                                    <h1 className="  font-bold text-2xl">{text}</h1>
-                                    <p className=" text-md">{p}</p>
+                                <div key={id} className=" px-5 ">
+                                    <div className="h-[200px] lg:h-[150px] p-2 my-5 rounded-xl Box_Shedow">
+                                        <h1 className=" Text_Color font-bold text-2xl">{text}</h1>
+                                        <p className=" text-md">{p}</p>
+                                    </div>
                                 </div>
                             ))
                         }

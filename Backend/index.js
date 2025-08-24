@@ -3,6 +3,7 @@ import dotenv from 'dotenv';
 import mongoose from "mongoose";
 import userRouter from "./routes/user.route.js";
 import cors from "cors";
+import seedAdmin from "./controller/admin.controller.js"
 
 dotenv.config();
 
@@ -17,6 +18,7 @@ app.use(cors());
 try {
   mongoose.connect(URI);
   console.log("AcroDesk Pro Connected to Mongoose db..");
+  await seedAdmin(); 
 } catch (error) {
   console.log(error);
 }

@@ -40,6 +40,10 @@ function Navbar() {
             { id: 3, text: "View Documents", link: "/dashboard/hod/viewdocuments" },
             { id: 4, text: "Message Board", link: "/dashboard/hod/messageboard" },
         ],
+        "@dmin":[
+            {id:1, text:"Home", link:"/dashboard"},
+            {id:2, text:"HOD Aprove",link:"/dashboard/hodlist"},
+        ]
     };
 
     const getNavItemsByRole = (role) => {
@@ -69,8 +73,8 @@ function Navbar() {
             <div className="w-[90%] h-auto mx-auto rounded-b-xl p-2 Box_Shedow flex justify-between items-center">
                 <div className="flex gap-2 justify-center items-center">
                     <img src={Logo} className='Box_Shedow rounded-full w-[50px] md:w-[80px] ' />
-                    <h1 className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent  p-1 text-2xl md:text-4xl font-bold '>AcroDesk </h1>
-                    <span className='bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md text-sm p-1 text-white font-bold'>Pro</span>
+                    <h1 className='Text_Color  p-1 text-2xl md:text-4xl font-bold '>AcroDesk </h1>
+                    <span className='BG_Color rounded-md text-sm p-1 text-white font-bold'>Pro</span>
                 </div>
                 <ul className=' gap-5 justify-center items-center hidden lg:flex'>
                     {
@@ -80,7 +84,7 @@ function Navbar() {
                             </Link>
                         ))
                     }
-                    <div onClick={handleLogout} className={`bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md p-1 font-bold flex justify-center items-center gap-2  cursor-pointer text-white text-xl  ${authUser?.user?.role ? "block" : "hidden"}`}>
+                    <div onClick={handleLogout} className={`BG_Color  rounded-md p-1 font-bold flex justify-center items-center gap-2  cursor-pointer text-white text-xl  ${authUser?.user?.role ? "block" : "hidden"}`}>
                         <IoIosLogOut /> Log Out
                     </div>
 
@@ -104,7 +108,7 @@ function Navbar() {
                                     </Link>
                                 ))
                             }
-                            <div onClick={handleLogout} className={`bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-md p-1 font-bold flex justify-center items-center gap-2  cursor-pointer text-white text-xl  ${authUser?.user?.role ? "block" : "hidden"}`}>
+                            <div onClick={handleLogout} className={`BG_Color  rounded-md p-1 font-bold flex justify-center items-center gap-2  cursor-pointer text-white text-xl  ${authUser?.user?.role ? "block" : "hidden"}`}>
                                 <IoIosLogOut />  Log Out
                             </div>
                         </ul>

@@ -32,7 +32,7 @@ function Footer() {
           <img src={Logo1} className=' p-5 rounded-xl bg-white Box_Shedow' />
           
           <div className="Box_Shedow p-4 rounded-xl flex justify-center items-center flex-col gap-2">
-            <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-xl">FOLLOW US</h1>
+            <h1 className="Text_Color font-bold text-xl">FOLLOW US</h1>
             <ul className=" flex  justify-center items-center gap-5">
               {
                 Icon.map(({ id, icon }) => (
@@ -42,7 +42,7 @@ function Footer() {
             </ul>
           </div>
         </div>
-          <h1 className=" text-white text-center text-xl">© 2025 AcroDesk Pro. All Rights Reserved.</h1>
+          <h1 className=" text-white p-2 text-center text-xl">© 2025, <span className=" font-bold">AcroDesk Pro</span>, All Rights Reserved.</h1>
       </div>
     </>
   )

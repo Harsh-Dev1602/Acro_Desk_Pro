@@ -95,7 +95,7 @@ function Register() {
         <>
             <div className="w-[90%] py-10 mx-auto flex justify-center items-center">
                 <form onSubmit={handleSubmit(onSubmit)} className='w-full md:w-[450px] p-5 Box_Shedow rounded-xl flex justify-center items-center flex-col gap-5'>
-                    <h1 className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent p-2 font-bold text-2xl md:text-4xl">User Registration</h1>
+                    <h1 className="Text_Color p-2 font-bold text-2xl md:text-4xl">User Registration</h1>
                     <div className="w-full h-auto">
                         <input type="text" {...register("fullname", { required: true })} className='w-full p-2 outline-none  text-xl  rounded-xl shadow-sm shadow-[#cccc]' placeholder='Enter a full name' />
                         {errors.fullname && <span className=" text-red-600 font-semibold text-md">This field is required</span>}
