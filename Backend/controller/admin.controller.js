@@ -1,12 +1,9 @@
 import Admin from '../models/admin.model.js';
 import bcrypt from 'bcrypt';
 
- const seedAdmin = async () => {
-   const adminEmail = process.env.ADMIN_EMAIL;
-   
+ const seedAdmin = async () => {   
    try {
-     const existingAdmin = await Admin.findOne({ email: adminEmail });
-     
+     const existingAdmin = await Admin.findOne({ email: process.env.ADMIN_EMAIL }); 
      if (existingAdmin) {
        console.log('✅ @dmin already exists..');
        return;

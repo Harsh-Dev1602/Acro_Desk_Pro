@@ -10,6 +10,11 @@ import LogIn from './Com/LogIn'
 import Contect from './Com/Contect'
 import About from './Com/About'
 
+import HODDashboard from './Dashboard/HODDashboard/HODDashboard.jsx';
+import StudentDashboard from './Dashboard/StudentDashboard/StudentDashboard.jsx';
+import FacultyDashboard from './Dashboard/FacultyDashboard/FacultyDashboard.jsx';
+import AdminDashboard from './Dashboard/AdminDashboard/AdminDashboard.jsx';
+
 import Dashboard from "./Dashboard/Dashboard.jsx"
 import Queries from "./Dashboard/StudentDashboard/Queries.jsx"
 import Documents from "./Dashboard/StudentDashboard/Documents.jsx"
@@ -28,6 +33,11 @@ function App() {
             <Route path="/login" element={authUser ? < Navigate to="/dashboard" /> : <LogIn />} />
             <Route path="/about" element={<About />} />
             <Route path="/contect" element={<Contect />} />
+
+            <Route path='/HODDashboard' element={authUser ? <HODDashboard/> :<Navigate to="/" />}/>
+            <Route path='/StudentDashboard' element={authUser ? <StudentDashboard/> :<Navigate to="/" />}/>
+            <Route path='/FacultyDashboard' element={authUser ? <FacultyDashboard/> :<Navigate to="/" />}/>
+            <Route path='/AdminDashboard' element={authUser ? <AdminDashboard/> :<Navigate to="/" />}/>
 
             <Route path='/dashboard' element={authUser ? <Dashboard /> : <Navigate to="/" />} />
             <Route path='/dashboard/student/queries' element={authUser ? <Queries /> : <Navigate to="/" />} />

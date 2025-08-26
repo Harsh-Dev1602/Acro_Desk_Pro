@@ -3,6 +3,25 @@ import img1 from "../../public/Img/img1.webp"
 import stu from "../../public/Img/stu.webp"
 
 function About() {
+    const aboutText = [
+        {
+            id: 0,
+            text: "Smart Workspace for Teams",
+            p: "AcroDesk Pro is designed to provide a comprehensive smart workspace where teams can seamlessly manage projects, track tasks, and collaborate effectively in one unified platform. The interface is intuitive, ensuring that even first-time users can navigate effortlessly. By consolidating tools for planning, communication, and monitoring, AcroDesk Pro eliminates the need for juggling multiple applications, saving time and reducing workflow friction. Whether it’s managing sprints, allocating resources, or tracking deliverables, the platform empowers teams to stay organized and productive from start to finish.",
+        },{
+            id: 1,
+            text: "Seamless Collaboration",
+            p: "Collaboration is at the heart of AcroDesk Pro. The platform enables real-time updates, ensuring that all members stay informed about project changes and task progress without delay. Integrated live chat functionality allows professors, managers, and team members to exchange quick messages, share documents, and even collaborate on problem-solving without leaving the workspace. Shared boards provide visual overviews of tasks and project stages, while notifications and alerts keep everyone in sync, preventing miscommunication and delays.",
+        },{
+            id: 2,
+            text: "Customizable Workflow",
+            p: "No two teams operate in the same way, which is why AcroDesk Pro offers highly customizable workflows. Users can tailor boards, create automated processes, and assign role-based permissions to match their specific operational needs. Teams can define custom stages, integrate preferred productivity tools, and build processes that suit their pace and style of work. Automation features reduce repetitive tasks, such as status updates and reminders, allowing teams to focus on core activities like planning and execution.",
+        },{
+            id: 4,
+            text: "Secure & Scalable",
+            p: "Students can submit doubts anytime — in class or after hours — using a simple form or chat widget. Each submission accepts text, images, and short code snippets so students can explain the problem clearly. Submissions are timestamped and stored immediately for faculty review.",
+        },
+    ]
     return (
         <>
             <div className="w-[90%] mx-auto py-4">
@@ -15,9 +34,7 @@ function About() {
                         <li className="p-2  text-xl text-justify">
                             Professors can track queries, view past discussions, and manage subject-specific concerns with ease. With its intuitive dashboard and analytics, AcroDesk Pro empowers educators to provide timely academic support while improving the overall learning experience.
                         </li>
-                        <li className="p-2  text-xl text-justify">
-                            Designed with ease of use in mind, AcroDesk Pro is mobile and desktop friendly, secure, and scalable for any college or university setup. It not only enhances learning outcomes for students but also reduces communication overload for professors.
-                        </li>
+
 
                     </ul>
                 </div>
@@ -34,6 +51,20 @@ function About() {
                     <img src={img1} className="order-1 lg:order-2 w-[400px] rounded-xl Box_Shedow" />
                 </div>
 
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                
+                        {
+                            aboutText.map(({ id, text, p }) => (
+                                <div key={id} className=" px-1 bg-[#cccccc34] rounded-xl Box_Shedow">
+                                    <div className=" p-2 ">
+                                        <i className=" Text_Color font-extrabold text-2xl">{text}</i>
+                                        <p className="pt-1 text-md text-justify">{p}</p>
+                                    </div>
+                                </div>
+                            ))
+                        }
+             
+                </div>
 
             </div>
         </>
