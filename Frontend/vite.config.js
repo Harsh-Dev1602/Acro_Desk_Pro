@@ -11,7 +11,7 @@ export default defineConfig({
     port: 3002,
     proxy: {
       "/api": {
-        target: "https://backend9876543210.vercel.app/",
+        target: "https://acro-desk-pro.onrender.com",
         changeOrigin: true,
       },
     },
