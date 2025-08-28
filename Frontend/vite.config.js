@@ -11,7 +11,7 @@ export default defineConfig({
     port: 3002,
     proxy: {
       "/api": {
-        target: "https://acro-desk-pro.onrender.com",
+        target: "http://localhost:3000",
         changeOrigin: true,
       },
     },

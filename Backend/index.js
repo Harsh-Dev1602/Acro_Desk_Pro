@@ -13,7 +13,7 @@ const URI = process.env.MONGODB_URI;
 
 const app = express();
 app.use(express.json());
-app.use(cors({ origin: "https://acrodesk.vercel.app" }));
+app.use(cors());
 
 try {
   mongoose.connect(URI);
