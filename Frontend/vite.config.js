@@ -11,7 +11,7 @@ export default defineConfig({
     port: 3002,
     proxy: {
       "/api": {
-        target: "http://localhost:3000",
+        target: "https://backend9876543210.vercel.app/",
         changeOrigin: true,
       },
     },
