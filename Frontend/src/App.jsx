@@ -19,13 +19,15 @@ import Dashboard from "./Dashboard/Dashboard.jsx"
 import Queries from "./Dashboard/StudentDashboard/Queries.jsx"
 import Documents from "./Dashboard/StudentDashboard/Documents.jsx"
 import MessageBoard from "./Dashboard/StudentDashboard/MessageBoard.jsx"
+
+import HODAprove from './Dashboard/HODDashboard/HODAprove.jsx';
 function App() {
   const [authUser, setAuthUser] = useAuth();
   
   return (
     <>
       <div className="bg-white text-black">
-        <div className="w-[94%] h-auto mx-auto  min-[1700px]:w-[70%] min-[3500px]:w-[20%] ">
+        <div className="w-full  h-auto mx-auto  min-[1700px]:w-[70%] min-[3500px]:w-[20%] ">
           <Navbar />
           <Routes>
             <Route path="/" element={<Home />} />
@@ -44,6 +46,8 @@ function App() {
             <Route path='/dashboard/student/documents' element={authUser ? <Documents /> : <Navigate to="/" />} />
             <Route path='/dashboard/student/messageboard' element={authUser ? <MessageBoard /> : <Navigate to="/" />} />
 
+
+            <Route path='/dashboard/hodlist' element={authUser ? <HODAprove /> : <Navigate to="/" />} />
           </Routes>
           <Footer />
         </div>
