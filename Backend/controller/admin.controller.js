@@ -12,7 +12,7 @@ import bcrypt from 'bcrypt';
 
     const newAdmin = new Admin({
       fullname: 'HARSH DEV',
-      email: adminEmail,
+      email: process.env.ADMIN_EMAIL,
       password: hashPassword,
       role: '@dmin',
       verified: true

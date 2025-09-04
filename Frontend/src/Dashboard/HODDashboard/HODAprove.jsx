@@ -34,7 +34,7 @@ export default function HODAprove() {
                     <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3 py-2">
                         {hods.map((hod) => (
                             <div
-                                key={hod.id}
+                                key={hod._id}
                                 className="bg-[#cccccc17] Box_Shedow rounded-xl p-4"
                             >
                                 <div className="">
